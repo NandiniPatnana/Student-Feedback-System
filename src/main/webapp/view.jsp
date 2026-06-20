@@ -27,7 +27,7 @@ try {
     Connection con = DriverManager.getConnection(
       "jdbc:mysql://localhost:3306/feedback",
       "root",
-      "nandu?15"
+      "root"
     );
 
     PreparedStatement ps = con.prepareStatement(
