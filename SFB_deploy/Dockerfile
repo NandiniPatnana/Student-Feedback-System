@@ -6,6 +6,7 @@ RUN apt-get update && \
     mkdir -p /var/run/mysqld && chown mysql:mysql /var/run/mysqld
 
 # Copy your WAR file into Tomcat webapps
+# COPY SFB_FinalProject.war /usr/local/tomcat/webapps/ROOT.war
 COPY SFB_FinalProject.war /usr/local/tomcat/webapps/ROOT.war
 
 # Copy DB init script and startup script
