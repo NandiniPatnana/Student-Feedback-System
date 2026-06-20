@@ -1,4 +1,4 @@
-FROM tomcat:10.1-jdk21
+FROM tomcat:10.1-jdk17
 
 # Install MySQL server
 RUN apt-get update && \
@@ -6,7 +6,7 @@ RUN apt-get update && \
     mkdir -p /var/run/mysqld && chown mysql:mysql /var/run/mysqld
 
 # Copy your WAR file into Tomcat webapps
-COPY SFB_FinalProject.war /usr/local/tomcat/webapps/
+COPY SFB_FinalProject.war /usr/local/tomcat/webapps/ROOT.war
 
 # Copy DB init script and startup script
 COPY init.sql /init.sql
