@@ -1,4 +1,4 @@
-FROM tomcat:10.1-jdk17
+FROM tomcat:10.1-jdk21
 
 # Install MySQL server
 RUN apt-get update && \
